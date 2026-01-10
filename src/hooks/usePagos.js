@@ -7,7 +7,7 @@ export default function usePagos() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("../../data/payments.json")
+    fetch("/ParkfastDashb/data/payments.json")
       .then((res) => res.json())
       .then((data) => {
         setPayments(data);

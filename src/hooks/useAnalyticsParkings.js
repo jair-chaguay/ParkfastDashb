@@ -4,7 +4,7 @@ const useAnalyticsParkings = () => {
   const [parkings, setParkings] = useState([]); // ✅ array
 
   useEffect(() => {
-    fetch("../../data/analytics_parkings.json")
+    fetch("/ParkfastDashb/data/analytics_parkings.json")
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {

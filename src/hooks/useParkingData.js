@@ -5,7 +5,7 @@ export default function useParkingData() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("../../data/dashboardData.json")
+    fetch("/ParkfastDashb/data/dashboardData.json")
       .then(res => res.json())
       .then(json => {
         setDashboard(json);

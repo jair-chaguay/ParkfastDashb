@@ -17,7 +17,7 @@ const useAnalyticsKPIs = () => {
   const [kpis, setKpis] = useState([]);
 
   useEffect(() => {
-    fetch("../../data/analytics_kpis.json")
+    fetch("/ParkfastDashb/data/analytics_kpis.json")
       .then((res) => res.json())
       .then((data) => {
         const parsed = data.slice(0, 4).map((kpi) => ({
