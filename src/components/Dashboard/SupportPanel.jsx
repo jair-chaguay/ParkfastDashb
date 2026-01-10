@@ -2,7 +2,13 @@ import useParkingData from "../../hooks/useParkingData";
 
 const SupportPanel = () => {
   const { dashboard, loading } = useParkingData();
-  if (loading || !dashboard) return null;
+  if (loading || !dashboard) {
+    return (
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6">
+        <div className="h-32 bg-slate-200 dark:bg-slate-800 rounded animate-pulse" />
+      </div>
+    );
+  }
 
   return (
     <div className="

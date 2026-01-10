@@ -5,16 +5,17 @@ import LatencyChart from "../Dashboard/LatencyChart";
 import RatingsChart from "../Dashboard/RatingsChart";
 import PaymentsTable from "../Dashboard/PaymentsTable";
 import SupportPanel from "../Dashboard/SupportPanel";
-import userParkingData from "../../hooks/useParkingData";
+import SearchTimeGauge from "../Dashboard/SearchTimeGauge";
+import useParkingData from "../../hooks/useParkingData";
 
 const Dashboard = () => {
-  const {data, loading} = userParkingData();
+  const {dashboard, loading} = useParkingData();
   if(loading){
     return <p className="p-6">Cargando datos...</p>;
   }
 
   return (
-    <div className="flex-1 overflow-y-auto p-6 space-y-6">
+    <div className="space-y-6">
 
       <KPISection />
 
@@ -37,10 +38,13 @@ const Dashboard = () => {
       </div>
 
       <div className="grid grid-cols-12 gap-6">
-        <div className="col-span-12 lg:col-span-7">
-          <PaymentsTable />
+        <div className="col-span-12 lg:col-span-4">
+          <SearchTimeGauge />
         </div>
         <div className="col-span-12 lg:col-span-5">
+          <PaymentsTable />
+        </div>
+        <div className="col-span-12 lg:col-span-3">
           <SupportPanel />
         </div>
       </div>
