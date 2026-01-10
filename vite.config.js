@@ -6,5 +6,5 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/ParkfastDashb/"
+  base: "https://jair-chaguay.github.io/ParkfastDashb"
 })
