@@ -5,7 +5,7 @@ export default function useUsersData() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/ParkfastDashb/data//users.json") // TU JSON TAL CUAL
+    fetch("/ParkfastDashb/data/users.json") // TU JSON TAL CUAL
       .then(res => res.json())
       .then(data => {
         setUsers(data);

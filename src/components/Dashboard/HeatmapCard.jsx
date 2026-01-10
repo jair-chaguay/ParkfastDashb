@@ -9,7 +9,7 @@ const HeatmapCard = () => {
   border border-dashed border-indigo-300 dark:border-slate-700
   flex flex-col items-center justify-center
 ">
-  <img src="/img.png" alt="sa" />
+  <img src="/ParkfastDashb/img.png" alt="sa" />
 </div>
 
   );
