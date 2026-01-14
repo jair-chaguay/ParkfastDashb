@@ -1,4 +1,6 @@
 import AnalyticsKPIs from "./AnalyticsKPIs";
+import RevenueCard from "./RevenueCard";
+import PeakHoursCard from "./PeakHoursCard";
 import ParkingsTable from "./ParkingsTable";
 
 const Analytics = () => {
@@ -7,13 +9,8 @@ const Analytics = () => {
       <AnalyticsKPIs />
 
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-        <div className="bg-white rounded-2xl p-6">
-          📈 Gráfica ingresos
-        </div>
-
-        <div className="bg-white rounded-2xl p-6">
-          ⏱️ Horas pico
-        </div>
+        <RevenueCard />
+        <PeakHoursCard />
       </div>
 
       <ParkingsTable />

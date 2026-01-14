@@ -4,12 +4,14 @@ import {
   Users,
   CreditCard,
   MessageSquare,
-  Zap
+  Zap,
+  ParkingCircle
 } from "lucide-react";
 
 const menuItems = [
   { id: "dashboard", icon: LayoutDashboard, label: "Overview" },
   { id: "analytics", icon: BarChart3, label: "Analytics" },
+  { id: "parkings", icon: ParkingCircle, label: "Parkings"},
   { id: "users", icon: Users, label: "Usuarios" },
   { id: "payments", icon: CreditCard, label: "Pagos" },
 ];

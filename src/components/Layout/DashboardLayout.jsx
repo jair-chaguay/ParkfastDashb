@@ -5,6 +5,7 @@ import Analytics from "../Anlytics/Analytics";
 import Dashboard from "../pages/Dashboard";
 import Usuarios from "../Usuarios/Usuarios";
 import Payments from "../Pagos/Pagos"
+import Parkings from "../Parkings/Parkings";
 
 const DashboardLayout = ({ children, darkMode, setDarkMode }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -15,12 +16,14 @@ const DashboardLayout = ({ children, darkMode, setDarkMode }) => {
     case "analytics":
       return <Analytics />;
 
+    case "parkings":
+      return <Parkings/>;
+      
     case "users":
       return <Usuarios />;
 
     case "payments":
       return <Payments />;
-
 
     default:
       return <Dashboard />;
